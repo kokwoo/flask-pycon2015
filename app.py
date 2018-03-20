@@ -18,6 +18,9 @@ def question(id):
         if request.form['answer'] == 'yes':
             return redirect(url_for('question', id=id+1))
         else:
+            # POST-REDIRECT-GET PATTERN
+            # Helps to handle a situation a user would otherwise not know how to
+            # handle. i.e the popup box displayed by chrome
             return redirect(url_for('question', id=id))
     return render_template('question.html', question=questions[id])
 
