@@ -5,7 +5,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 guesses = ['Python', 'Java', 'C++']
 
+# Replacing the hardcoded string with a native flask function called
+# render_template, passing in the html page
 
+# Templates helps to seprate logic from presentation 
 @app.route('/')
 def index():
     return render_template('index.html')
