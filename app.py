@@ -2,9 +2,12 @@
 
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import Form
+# Classes that represents all the different form field types
 from wtforms.fields import RadioField, SubmitField
 
 app = Flask(__name__)
+# Flask WTF grabs the secret key stored inside app object to generate the csrf
+# token. This applicatin config secret key should be stored in the env.
 app.config['SECRET_KEY'] = 'secret!'
 questions = ['Is it compiled?', 'Does it run on a VM?']
 guesses = ['Python', 'Java', 'C++']
