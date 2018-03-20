@@ -11,10 +11,13 @@ def index():
     return '<h1>Guess the Language!</h1>'
 
 
+# Dynamic port / Dynamic URL
+
+# Everytime we recieve an input from users the input have to be validated 
 @app.route('/guess/<int:id>')
 def guess(id):
     return ('<h1>Guess the Language!</h1>'
-            '<p>My guess: {0}</p>').format(guesses[id])
+            '<p>My guess: {}</p>').format(guesses[id])
 
 
 if __name__ == '__main__':
