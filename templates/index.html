@@ -5,6 +5,14 @@
     <body>
         <h1>Guess the Language</h1>
         <p>Think of your favorite programming language. I'm going to try to guess it!</p>
-        <p>Ready? Click <a href="{{ url_for('question', id=0) }}">here</a> to begin!</p>
+				<!--Flask maps url to functions via the decorators with have in app.py
+						url_for is a way for flask to helps to generate the url through
+						finding the functions instead of finding the function via a ur.
+						For example url_for(<function name>, <arguments for this function>) it
+						will generate the url accordingly -->
+				
+				<!--The engine that flask uses is called jinja2. Variables are placed
+						within the curly brackets in templates, has to be a plain variable-->
+				<p>Ready? Click <a href="{{ url_for('question', id=0) }}">here</a> to begin!</p>
     </body>
 </html>

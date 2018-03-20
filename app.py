@@ -11,7 +11,8 @@ guesses = ['Python', 'Java', 'C++']
 def index():
     return render_template('index.html')
 
-
+# url for identify the function name question and take the given variable to
+# construct the url /questions/<argument>
 @app.route('/question/<int:id>')
 def question(id):
     return render_template('question.html', question=questions[id])
