@@ -18,4 +18,7 @@ def guess(id):
 
 
 if __name__ == '__main__':
+    # 0.0.0.0 can see within network at home 
+    # default port is 80
+    # This allow the applicatin to be public i.e. outside my own machine
     app.run(host='0.0.0.0', port=5000, debug=True)
